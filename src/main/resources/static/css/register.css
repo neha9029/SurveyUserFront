@@ -1,0 +1,235 @@
+body {
+	overflow: auto;
+	background-color: #363940;
+	width: 100%;
+	margin: 0;
+	font-weight: 200;
+}
+
+#wholeContainer {
+	background-color: #363940;
+	height: auto;
+	overflow: auto;
+	width: 100%;
+}
+
+#container {
+	background-color: #E4E5E8;
+	margin: 0% 0% 0% 25%;
+	height: auto;
+	width: 50%;
+}
+
+.mainContent {
+	height: auto; margin : 0;
+	display: block;
+	overflow: auto;
+	margin: 0;
+}
+
+.blockElement {
+	margin: 0;
+	display: block;
+	overflow: scroll;
+	flex-direction: column;
+	width: 100%;
+	min-height: auto;
+	height: auto;
+}
+
+#header {
+	height: 7vw;
+	color: #363940;
+	font-family: Arial, sans-serif;
+}
+
+#headerTitle {
+	text-align: center;
+	padding: 0% 0% 0% 0%;
+	width: 100%;
+}
+
+#loginURL {
+	text-decoration: none;
+	color: blue;
+	font-size: 60%;
+}
+
+/* #entireForm {
+	position: relative;
+	height: auto;
+	overflow:scroll;
+	width: 100%;
+	border: solid 3px purple;
+	
+} */
+
+/* #formElements {
+	position: absolute;
+	overflow:scroll;
+	height: 100%;
+	width: 100%;
+	padding: 0% 0% 0% 0%;
+} */
+.textLabel {
+	color: #363940;
+	width: 84%;
+	height: 4%;
+	right: 0;
+	text-align: left;
+	display: inline-block;
+	font-family: Arial, sans-serif;
+	padding: 0% 0% 1% 0%;
+	margin: 0% 0% 0% 5%;
+	font-size: 90%;
+}
+
+#country {
+	padding: 0% 0% 2% 0%;
+}
+
+input[type=text], input[type=password], input[type=email], select {
+	width: 84%;
+	font-size: 90%;
+	padding: 2% 3%;
+	margin: 0% 5% 2% 5%;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-ms-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+select {
+	margin: 1% 0% 3% 5%;
+	background-color: white;
+	padding: 2%;
+	height: 500%;
+	width: 90%;
+	font-size: 100%;
+}
+
+p {
+	color: #363940;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#typeAccountRadio {
+	width: 100%;
+}
+
+#accountType{
+	width: 10vw;
+    margin: 0% 2% 0% 5%;
+	
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px 0vw 0px 8px;
+	display: inline-block;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0% 0vw 0% 1vw;
+}
+
+#account {
+	margin: 5px 0vw;
+}
+
+input[type=checkbox] {
+	margin: 0px 0px 0vw 1vw;
+	cursor: pointer;
+}
+
+.para-radio {
+	margin: 0%;
+}
+input[type=radio] {
+	width: 20Px;
+	color: #363940;
+	font-size: 20Px;
+	cursor: pointer;
+}
+
+.btn-container {
+	padding: auto;
+	height: 8vw;
+	width: 10vw;
+	margin: 3vw 0vw 6vw 0vw;
+}
+
+.btn-submit {
+	position: absolute;
+	text-align: center;
+	width: 22vw;
+	height: 4vw;
+	left: 40vw;
+	cursor: pointer;
+	padding: 1% 2% 1%;
+	background-color: #363940;
+	color: #E4E5E8;
+	font-size: 20px;
+}
+
+div {
+	margin: 0%;
+	display: block;
+}
+
+.error {
+	color: red;
+	float: right;
+	margin: 0% 5% 0% 5%;
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 600px) , ( max-width
+	: 1100px) , {
+	#wholeContainer {
+		background-color: #363940;
+		height: auto;
+		overflow: auto;
+		width: 100%;
+	}
+	#header {
+		height: 12vw;
+		color: #363940;
+		font-family: Arial, sans-serif;
+	}
+	#container {
+		margin: 0% 0% 0% 0%;
+		height: auto;
+		width: 100%;
+	}
+	.blockElement {
+		margin: 0;
+		display: block;
+		overflow: scroll;
+		flex-direction: column;
+		width: 100%;
+		min-height: auto;
+		height: auto;
+	}
+	.btn-submit {
+		left: 40vw;
+		width: 20vw;
+		height: 16vh;
+		font-size: 2vw;
+		padding: 1% 2% 1%;
+	}
+	
+	#account {
+	margin: 5px 3vw;
+    }
+	
+	input[type=checkbox] {
+	margin: 0px 0px 0vw 3vw;
+	cursor: pointer;
+}
+}
