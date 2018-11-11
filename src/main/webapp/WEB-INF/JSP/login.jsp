@@ -19,15 +19,17 @@
 		 </div>
 		 
 	 	<!--<form action="profile/profilePage" method="GET"> -->
-			<form:form class="blockElement" action="processLoginForm" modelAttribute="loginDetails" method="POST">		
+			<form:form class="blockElement" action="login" modelAttribute="loginDetails" method="POST">		
 				<div id="entireForm">
 					<div id="formElements">
-						<label class="textLabel" for="email">Email:</label>
+						<label class="textLabel" for="email">
+						Email: <form:errors path="email" cssClass="error"/>
+						</label>
 						<form:input class="textfield" id="email" path="email"/><br/>
-						<form:errors path="email" cssClass="error"/>
-						<label class="textLabel" for="password">Password:</label>
+						<label class="textLabel" for="password">
+						Password: <form:errors path="password" cssClass="error"/>
+						</label>
 						<form:password class="textfield" id="password" path="password"/><br/>
-						<form:errors path="password" cssClass="error"/>
 					
 					</div>
 				</div>

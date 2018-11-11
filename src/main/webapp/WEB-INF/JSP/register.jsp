@@ -20,7 +20,7 @@
 
 		</div>
 		<!--<form action="profile/profilePage" method="GET"> -->
-		<form:form class="blockElement" action="processRegisterForm"
+		<form:form class="blockElement" action="register"
 			modelAttribute="registerDetails" method="POST">
 			<div id="entireForm">
 				<div id="formElements">
