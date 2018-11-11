@@ -82,11 +82,9 @@ body {
 	padding: 0% 0% 1% 0%;
 	margin: 0% 0% 0% 5%;
 	font-size: 90%;
+	
 }
 
-#country {
-	padding: 0% 0% 2% 0%;
-}
 
 input[type=text], input[type=password], input[type=email], select {
 	width: 84%;
@@ -121,7 +119,9 @@ p {
 }
 
 #accountType{
-	width: 10vw;
+	padding: 0% 0% 2% 0%;
+	width: 45vw;
+	height: 3vw;
     margin: 0% 2% 0% 5%;
 	
 }
@@ -183,9 +183,10 @@ div {
 }
 
 .error {
+	width: 50%;
 	color: red;
 	float: right;
-	margin: 0% 5% 0% 5%;
+	margin: 0% 0% 0% 5%;
 
 }
 
@@ -231,5 +232,13 @@ div {
 	input[type=checkbox] {
 	margin: 0px 0px 0vw 3vw;
 	cursor: pointer;
+}
+
+#accountType{
+	padding: 0% 0% 2% 0%;
+	width: 90vw;
+	height: 7vw;
+    margin: 0% 2% 0% 5%;
+	
 }
 }

@@ -8,7 +8,10 @@ public class HomeController {
 
 	
 	@GetMapping("/")
-	public String getRegister() {
+	public String domain() {
 		return "login";
 	}
+
+	
+	
 }
