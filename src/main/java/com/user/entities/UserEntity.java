@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name="userDetails")
+
+@Entity(name = "UserDetails")
 public class UserEntity {
 	
 	@Id
@@ -23,7 +24,7 @@ public class UserEntity {
 	@Column(nullable=false, length=50)
 	private String lastName;
 
-	@Column(nullable=false, length=120)
+	@Column(nullable=false, length=120, unique=true)
 	private String email;
 	
 	@Column(nullable=false)

@@ -3,8 +3,7 @@ package com.user.modelRequest;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 
 
@@ -27,6 +26,7 @@ public class RegisterRequest {
 	@NotEmpty(message="Enter password again")
 	private String confirmPassword;
 	
+	@NotEmpty(message="Enter account type")
 	private String accountType;
 	
 	
