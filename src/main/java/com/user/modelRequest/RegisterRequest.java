@@ -1,12 +1,32 @@
 package com.user.modelRequest;
 
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class RegisterRequest {
 	
+	@NotNull(message="Please enter First Name")
 	private String firstName;
+	
+	@NotNull(message="Please enter Last Name")
 	private String lastName;
+	
+	@NotNull(message="Please enter your Email Id")
+	@Email(message="Enter valid email")
+	private String email;
+	
+	@NotNull(message="Enter password")
+	@Size(min = 4, message="Enter atleast 4 letter password")
 	private String password;
+	
+	@NotNull(message="Enter password again")
 	private String confirmPassword;
+	
 	private String accountType;
+	
+	@AssertTrue(message="Please accept terms")
 	private boolean terms;
 	
 	
@@ -46,6 +66,13 @@ public class RegisterRequest {
 	public void setTerms(boolean terms) {
 		this.terms = terms;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	
 	
 
