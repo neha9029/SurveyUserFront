@@ -30,9 +30,6 @@ public class RegisterController {
 	@PostMapping("/register")
 	public String RegisterPost(@Valid @ModelAttribute("registerDetails") RegisterRequest registerRequest, BindingResult bindingResult ) {
 		
-		System.out.println(bindingResult.hasErrors());
-		System.out.println("emailExits" +userService.checkEmailExists(registerRequest.getEmail()));
-		System.out.println("AccountType" +registerRequest.getAccountType());
 
 		 if(userService.checkEmailExists(registerRequest.getEmail())) {
 			  bindingResult.rejectValue("email", "error.registerDetails", "Email Exists");

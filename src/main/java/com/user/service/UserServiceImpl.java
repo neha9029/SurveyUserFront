@@ -1,7 +1,10 @@
 package com.user.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -31,40 +34,29 @@ public class UserServiceImpl implements UserService{
 		return userDao.findUserByEmail(email);
 	 }
 	 
-	 
-	 public UserEntity findByEmailAndPassword(String email, String password) {
-		 			
-		 return userDao.findUserByEmailAndEncryptedPassword(email, bCryptPasswordEncoder.encode(password));
-	 }
-	 
+	 	 
 	 
 	//Checking if email already exists in the database
 	public boolean checkEmailExists(String email) {
 		if(findByEmail(email) != null) {
-			System.out.println(findByEmail(email));
 			return true;
 		}
 		else {
-			System.out.println(findByEmail(email));
 			return false;
 		}
 	}
 	
 	
-	//Check user exits in database by email and password
-	public boolean checkUserExists(String email,String password) {		
-		
-		if(findByEmail(email) == null) {
-			return false;
-		}
-		else if(findByEmailAndPassword(email, password) == null) {
-			return false;
-		}
-		else {
-			return true;
-		}
-		
-	}
+	//Verify whether database Password matches and password entered by user while login
+	@Override
+	public boolean dbPassworMatchesUserPassword(String password,String dbPassword) {
+	   if(bCryptPasswordEncoder.matches(password, dbPassword)) {
+		   return true;
+	   }
+	   else {
+		   return false;
+	   }
+   }
 	
 	
 	//Saving user Details to Database
@@ -83,12 +75,27 @@ public class UserServiceImpl implements UserService{
 		userDao.save(userEntity);
 	}
 
+	
+	//Method to get dbPassword and other details
 	@Override
-	public UserDetails loadUserByUsername(String arg0) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
+        UserEntity userEntity = userDao.findUserByEmail(email);
 		
-		return null;
+		if(null == userEntity) {
+			throw new UsernameNotFoundException("Username not found");
+		}
+		
+				//return  new User(userEntity.getEmail(), userEntity.getEncryptedPassword(), new ArrayList<>());
+	    return userEntity;
+	
 	}
+
+
+
+
+
+	
 	
 	
 

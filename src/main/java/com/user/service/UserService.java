@@ -9,7 +9,7 @@ public interface UserService extends UserDetailsService {
 
 	UserEntity findByEmail(String email);
 	boolean checkEmailExists(String email);
-	boolean checkUserExists(String email,String password);
     void saveUser(RegisterRequest registerDetails);
+    boolean dbPassworMatchesUserPassword(String password ,String dbPassword );
     
 }

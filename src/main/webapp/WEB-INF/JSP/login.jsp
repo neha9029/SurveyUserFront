@@ -1,4 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,12 @@
 			</h2>
 			
 		 </div>
-		 
+		 <div>
+		  <c:if test="${param.error != null}" >
+		   Invalid Password 
+		  </c:if>
+		  
+		 </div>
 	 	<!--<form action="profile/profilePage" method="GET"> -->
 			<form:form class="blockElement" action="login" modelAttribute="loginDetails" method="POST">		
 				<div id="entireForm">
