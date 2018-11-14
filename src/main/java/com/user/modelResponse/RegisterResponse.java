@@ -1,20 +1,27 @@
 package com.user.modelResponse;
 
-public class RegisterDetailsResponse {
+public class RegisterResponse {
 
 	
-	private long userId;
+	private String userId;
 	private String firstName;
 	private String lastName;
 	private String accountType;
 	private String email;
+	private int percentile;
 	
-	
-	public long getUserId() {
+
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(long userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+	public int getPercentile() {
+		return percentile;
+	}
+	public void setPercentile(int percentile) {
+		this.percentile = percentile;
 	}
 	public String getFirstName() {
 		return firstName;

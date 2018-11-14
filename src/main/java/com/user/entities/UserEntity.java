@@ -46,6 +46,17 @@ public class UserEntity implements UserDetails {
 	@Column(nullable=false)
 	private boolean terms;
 
+   @Column(columnDefinition="int(25) default 0")
+	private int percentile;
+	
+	public int getPercentile() {
+		return percentile;
+	}
+
+	public void setPercentile(int percentile) {
+		this.percentile = percentile;
+	}
+
 	public long getId() {
 		return id;
 	}

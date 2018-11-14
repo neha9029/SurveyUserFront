@@ -1,7 +1,9 @@
 package com.user.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.assertj.core.util.Lists;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -11,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.user.dao.UserDao;
+import com.user.dao.UserDto;
 import com.user.entities.UserEntity;
 import com.user.modelRequest.RegisterRequest;
 import com.user.securityConfig.RandomKey;
@@ -92,6 +95,26 @@ public class UserServiceImpl implements UserService{
 	}
 
 
+
+	@Override
+	public List<UserDto> getUsers() {
+		// TODO Auto-generated method stub
+		
+		List<UserDto> returnValue = new ArrayList<>();
+		Iterable<UserEntity> userEntity= userDao.findAll();
+		
+		for(UserEntity userEntityDetails: userEntity) {
+			UserDto userDto = new UserDto();
+			BeanUtils.copyProperties(userEntityDetails, userDto);
+			returnValue.add(userDto);
+		}
+		return returnValue;
+	}
+
+
+
+
+	
 
 
 
