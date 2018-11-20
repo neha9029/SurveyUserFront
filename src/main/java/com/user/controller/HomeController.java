@@ -8,10 +8,14 @@ public class HomeController {
 
 	
 	@GetMapping("/")
-	public String domain() {
+	public String getLogin() {
 		return "login";
 	}
 
+	@GetMapping("/logout")
+	public String getLogout() {
+		return "redirect:/login";
+	}
 	
 	
 }

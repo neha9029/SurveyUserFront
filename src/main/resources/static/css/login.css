@@ -15,12 +15,12 @@ body {
 
 #container {
 	background-color: #E4E5E8;
-	margin: 0% 0% 0% 25%;
+	margin: 7% 0% 0% 25%;
 	height: auto;
 	width: 50%;
 }
 
-	.blockElement {
+.blockElement {
 		margin: 0;
 		display: block;
 		overflow: scroll;
@@ -28,7 +28,7 @@ body {
 		width: 100%;
 		min-height: auto;
 		height: auto;
-	}
+}
 
 #header {
 	height: 7vw;
@@ -129,7 +129,7 @@ input[type=text], input[type=password], input[type=email] {
 		font-family: Arial, sans-serif;
 	}
 	#container {
-		margin: 0% 0% 0% 0%;
+		margin: 20vw 0% 0% 0%;
 		height: auto;
 		width: 100%;
 	}

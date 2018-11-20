@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 public class UserDto implements Serializable{
 
 
-
-
 	/**
 	 * 
 	 */
@@ -31,14 +29,15 @@ public class UserDto implements Serializable{
 	
 	private boolean terms;
 
-	private int percentile;
+	private int score;
 	
-	public int getPercentile() {
-		return percentile;
+	
+	public int getScore() {
+		return score;
 	}
 
-	public void setPercentile(int percentile) {
-		this.percentile = percentile;
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public long getId() {

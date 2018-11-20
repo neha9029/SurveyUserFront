@@ -12,18 +12,20 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
+import com.user.entities.UserEntity;
 import com.user.modelRequest.Login;
+import com.user.modelRequest.Surveys;
 import com.user.service.UserService;
 
 @Controller
 public class LoginController {
 
-	
 
-	
 	@Autowired
 	UserService userService;
 
@@ -36,7 +38,7 @@ public class LoginController {
 	}
 
 	@PostMapping("/login")
-	public String postLogin(@Valid @ModelAttribute("loginDetails") Login userloginDetails, BindingResult bindingResultLogin) {
+	public String postLogin(@Valid @ModelAttribute("loginDetails") Login userloginDetails, BindingResult bindingResultLogin,  RedirectAttributes redirectAttributes) {
 		if(bindingResultLogin.hasErrors()) {
 		    return "login";
 		}
@@ -63,9 +65,24 @@ public class LoginController {
 			return "login";
 		}
 		else {
-			return "profile";
+			UserEntity userEntity = userService.findByEmail(userloginDetails.getEmail());
+			String userId = userEntity.getUserId();
+	        redirectAttributes.addFlashAttribute("userId", userId);
+
+			return "redirect:/profile?" + "userId="+userId;
+
 		}
 	}
+	
+	
+	@GetMapping("/profile")
+	public String getUserProfile(@RequestParam("userId") String userId, Model model , Login userloginDetails ) {
+		UserEntity userEntity = userService.findUserByUserId(userId);
+		model.addAttribute("userDetails", userEntity);
+		return "profile";
+		
+	}
+
 
 	
 }

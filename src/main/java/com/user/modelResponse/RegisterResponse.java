@@ -8,7 +8,7 @@ public class RegisterResponse {
 	private String lastName;
 	private String accountType;
 	private String email;
-	private int percentile;
+	private int score;
 	
 
 	public String getUserId() {
@@ -17,11 +17,12 @@ public class RegisterResponse {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public int getPercentile() {
-		return percentile;
+	
+	public int getScore() {
+		return score;
 	}
-	public void setPercentile(int percentile) {
-		this.percentile = percentile;
+	public void setScore(int score) {
+		this.score = score;
 	}
 	public String getFirstName() {
 		return firstName;

@@ -4,7 +4,6 @@ import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
-
 public class RegisterRequest {
 	
 	@NotEmpty(message="Please enter First Name")

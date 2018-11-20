@@ -8,4 +8,5 @@ public interface UserDao extends CrudRepository<UserEntity, Long>{
 	
 	UserEntity findUserByEmail(String email);
     UserEntity findUserByEmailAndEncryptedPassword(String email, String password);
+    UserEntity findUserByUserId(String userId);
 }

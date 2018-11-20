@@ -1,0 +1,31 @@
+ ul{
+    list-style-type: none;
+ }
+
+ .btn btn-primary {
+ margin: 0px 0px 0px 20px;
+ }
+ 
+ 
+ input, optgroup, select, textarea{
+ margin: 20px;
+ 
+ }
+ 
+ li{
+ padding: 1vw;
+}
+
+input[type=radio]{
+	margin: 1vw;
+}
+
+.form{
+    margin: 0 1vw 0 1vw;
+	padding: 2vw;
+}
+
+.btnContainer {
+	margin: 0 0 0 40vw;
+	padding: 2vw;
+}

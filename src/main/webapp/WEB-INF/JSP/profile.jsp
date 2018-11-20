@@ -12,7 +12,6 @@
 <body>
 <jsp:include page="/WEB-INF/JSP/header.jsp" />
 <h3>
-Hi Neha 
 </h3>
 
 </body>

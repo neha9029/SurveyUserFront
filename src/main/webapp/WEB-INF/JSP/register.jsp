@@ -15,7 +15,7 @@
 		<div id="header" class="blockElement">
 			<h2 id="headerTitle">
 				Registration <a id="loginURL"
-					href="${pageContext.request.contextPath}/loginForm">Login?</a>
+					href="${pageContext.request.contextPath}/login">Login?</a>
 			</h2>
 
 		</div>

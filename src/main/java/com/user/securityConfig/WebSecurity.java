@@ -27,7 +27,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter{
 			"/error/**",
 			"/register",
 			"/profile",
-			"/login"
+			"/login",
+			"/survey",
+			"/surveyPost"
 
 };
 

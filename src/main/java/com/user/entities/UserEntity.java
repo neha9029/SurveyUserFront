@@ -47,14 +47,16 @@ public class UserEntity implements UserDetails {
 	private boolean terms;
 
    @Column(columnDefinition="int(25) default 0")
-	private int percentile;
+	private int score;
 	
-	public int getPercentile() {
-		return percentile;
+	
+
+	public int getScore() {
+		return score;
 	}
 
-	public void setPercentile(int percentile) {
-		this.percentile = percentile;
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public long getId() {

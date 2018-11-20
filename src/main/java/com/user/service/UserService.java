@@ -15,4 +15,5 @@ public interface UserService extends UserDetailsService {
     void saveUser(RegisterRequest registerDetails);
     boolean dbPassworMatchesUserPassword(String password ,String dbPassword );
     List<UserDto> getUsers();
+    UserEntity findUserByUserId(String userId);
 }

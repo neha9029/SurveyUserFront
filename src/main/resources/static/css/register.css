@@ -21,7 +21,8 @@ body {
 }
 
 .mainContent {
-	height: auto; margin : 0;
+	height: auto;
+	margin: 0;
 	display: block;
 	overflow: auto;
 	margin: 0;
@@ -82,9 +83,7 @@ body {
 	padding: 0% 0% 1% 0%;
 	margin: 0% 0% 0% 5%;
 	font-size: 90%;
-	
 }
-
 
 input[type=text], input[type=password], input[type=email], select {
 	width: 84%;
@@ -118,12 +117,11 @@ p {
 	width: 100%;
 }
 
-#accountType{
+#accountType {
 	padding: 0% 0% 2% 0%;
 	width: 45vw;
 	height: 3vw;
-    margin: 0% 2% 0% 5%;
-	
+	margin: 0% 2% 0% 5%;
 }
 
 ul {
@@ -150,6 +148,7 @@ input[type=checkbox] {
 .para-radio {
 	margin: 0%;
 }
+
 input[type=radio] {
 	width: 20Px;
 	color: #363940;
@@ -187,7 +186,6 @@ div {
 	color: red;
 	float: right;
 	margin: 0% 0% 0% 5%;
-
 }
 
 @media screen and (min-width: 900px) and (max-width: 600px) , ( max-width
@@ -224,21 +222,17 @@ div {
 		font-size: 2vw;
 		padding: 1% 2% 1%;
 	}
-	
 	#account {
-	margin: 5px 3vw;
-    }
-	
+		margin: 5px 3vw;
+	}
 	input[type=checkbox] {
-	margin: 0px 0px 0vw 3vw;
-	cursor: pointer;
-}
-
-#accountType{
-	padding: 0% 0% 2% 0%;
-	width: 90vw;
-	height: 7vw;
-    margin: 0% 2% 0% 5%;
-	
-}
+		margin: 0px 0px 0vw 3vw;
+		cursor: pointer;
+	}
+	#accountType {
+		padding: 0% 0% 2% 0%;
+		width: 90vw;
+		height: 7vw;
+		margin: 0% 2% 0% 5%;
+	}
 }

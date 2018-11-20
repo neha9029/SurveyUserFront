@@ -31,8 +31,8 @@ public class RegisterController {
 	public String RegisterPost(@Valid @ModelAttribute("registerDetails") RegisterRequest registerRequest, BindingResult bindingResult ) {
 		
 
-		 if(userService.checkEmailExists(registerRequest.getEmail())) {
-			  bindingResult.rejectValue("email", "error.registerDetails", "Email Exists");
+		if(userService.checkEmailExists(registerRequest.getEmail())) {
+			bindingResult.rejectValue("email", "error.registerDetails", "Email Exists");
 		}
 		if(bindingResult.hasErrors()) {
 			return "register";
@@ -44,6 +44,8 @@ public class RegisterController {
 		}
 		
 	}
+	
+	
 	
 	
 	
